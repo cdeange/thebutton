@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "The Button (Colorified)",
+  "description": "This extension adds the current colour as the header's background",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "https://*.reddit.com/r/thebutton/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.reddit.com/r/thebutton/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "thebutton.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
